@@ -14,6 +14,14 @@
         },
         withCredentials: true,
       });
+      fetch("https://ebs-middleware.vercel.app/getOrgEmp/202", {
+        method: "POST",
+        headers: {
+          Cookie: `ebsdb=1JyDzmZVrUKonh7DmW2oGWeQCN`,
+          "Content-Type": "application/json",
+        },
+        withCredentials: true,
+      });
 
       fetch(
         "http://dev-orclebs.intelloger.com:8000/webservices/rest/sup/get_emp_det/",
