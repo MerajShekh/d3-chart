@@ -14,6 +14,33 @@
         },
         withCredentials: true,
       });
+
+      fetch(
+        "http://dev-orclebs.intelloger.com:8000/webservices/rest/sup/get_emp_det/",
+        {
+          method: "POST",
+          headers: {
+            Cookie: `ebsdb=1JyDzmZVrUKonh7DmW2oGWeQCN`,
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            GET_EMP_DET_Input: {
+              RESTHeader: {
+                Responsibility: "APPLICATION_DEVELOPER",
+                RespApplication: "FND",
+                SecurityGroup: "STANDARD",
+                NLSLanguage: "AMERICAN",
+                Language: "US",
+                Org_Id: 202,
+              },
+              InputParameters: {
+                P_ORG_ID: 260, //Mandatory org id --for our instance 202
+                P_LANGUAGE: "US",
+              },
+            },
+          }),
+        }
+      );
     </script>
 
     <h5>Test</h5>
